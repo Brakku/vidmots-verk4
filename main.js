@@ -106,6 +106,7 @@ async function predictWebcam() {
     webcamElement.style.width = videoWidth;
 
     if (results.landmarks) {
+        console.log(results.landmarks);
         for (const landmarks of results.landmarks) {
             drawingUtils.drawConnectors(landmarks, GestureRecognizer.HAND_CONNECTIONS, {
                 color: "#00FF00",
